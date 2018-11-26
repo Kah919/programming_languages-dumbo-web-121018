@@ -3,9 +3,9 @@ def reformat_languages(languages)
   new_hash = {}
   languages.each do |style, val| #style is oop or functional
     val.each do |language, val2|
-      # new_hash[language] = { type: "", style: []}
+      new_hash[language] = { type: "", style: []}
       val2.each do |k, v|
-        new_hash[language] = { type: v, style: [] }
+        new_hash[language][:type] = v
         new_hash[language][:style] << style
       end
     end
